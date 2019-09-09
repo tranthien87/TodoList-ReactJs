@@ -23,13 +23,13 @@ class App extends Component {
   }
   
   generateData = () => {
-    localStorage.setItem('tasks', JSON.stringify(listOfTask.List));
-  }
-  componentWillMount = () => {
     let taskJSON = JSON.parse(localStorage.getItem('tasks'));
     this.setState({
       tasks: taskJSON
     })
+  }
+  componentWillMount = () => {
+    localStorage.setItem('tasks', JSON.stringify(listOfTask.List));
   }
   changeProgress = (id, progress) => {
     //console.log(id, progress);

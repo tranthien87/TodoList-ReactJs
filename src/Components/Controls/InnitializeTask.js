@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
 export default class InnitializeTask extends Component {
-  getDataFromLocalSt = () => 
+  getDataFromLocalSt = () =>{
     this.props.generateData();
+  }
+   
   
     render() {
         return (
